@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const VideoHero = () => {
   return (
@@ -31,18 +32,18 @@ const VideoHero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <a 
-            href="/projects" 
+          <Link 
+            to="/projects" 
             className="bg-construction-red hover:bg-red-700 text-white font-bold py-3 px-8 rounded-md transition-colors duration-300"
           >
             View Our Projects
-          </a>
-          <a 
-            href="/contact" 
+          </Link>
+          <Link
+            to="/contact" 
             className="bg-transparent hover:bg-white hover:text-construction-black text-white font-bold py-3 px-8 border-2 border-white rounded-md transition-colors duration-300"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
       

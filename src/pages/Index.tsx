@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import VideoHero from '@/components/home/VideoHero';
 import Services from '@/components/home/Services';
 import FeaturedProjects from '@/components/home/FeaturedProjects';
@@ -46,12 +47,12 @@ const Index = () => {
             <p className="text-xl mb-8 max-w-3xl mx-auto">
               Contact our expert team today for a consultation and let's build something amazing together.
             </p>
-            <a 
-              href="/contact" 
+            <Link
+              to="/contact" 
               className="bg-construction-red hover:bg-red-700 text-white font-bold py-3 px-8 rounded-md transition-colors duration-300"
             >
               Get In Touch
-            </a>
+            </Link>
           </div>
         </section>
       </main>
