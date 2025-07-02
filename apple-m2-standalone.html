@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple M2 Chip Specifications</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .apple-m2-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f3e8ff, #fdf2f8, #e0f2fe);
+            padding: 2rem;
+        }
+
+        .main-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: auto auto auto;
+            gap: 2rem;
+        }
+
+        .header-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .chip-card {
+            background: linear-gradient(135deg, #1f2937, #111827);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chip-content {
+            text-align: center;
+        }
+
+        .apple-logo {
+            width: 5rem;
+            height: 5rem;
+            background: white;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .chip-name {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.75rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .thunderbolt-icon {
+            background: #f97316;
+        }
+
+        .label {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .metric-huge {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-large {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-medium {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .metric-large-label {
+            color: #6b7280;
+            font-size: 1.125rem;
+        }
+
+        .metric-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .purple {
+            color: #9333ea;
+        }
+
+        .cpu-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cpu-core {
+            width: 2rem;
+            height: 2rem;
+            background: #e9d5ff;
+            border: 1px solid #c084fc;
+            border-radius: 0.5rem;
+        }
+
+        .gpu-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .gpu-core {
+            width: 1rem;
+            height: 1rem;
+            background: #e9d5ff;
+            border: 1px solid #c084fc;
+            border-radius: 0.25rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .apple-m2-container {
+                padding: 1rem;
+            }
+            
+            .header-grid,
+            .content-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .metric-huge {
+                font-size: 2rem;
+            }
+            
+            .chip-name {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .header-grid,
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="apple-m2-container">
+        <div class="main-grid">
+            <!-- Header Section -->
+            <div class="header-grid">
+                <!-- Thunderbolt -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon thunderbolt-icon">⚡</div>
+                        <span class="label">Thunderbolt 4</span>
+                    </div>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div class="card">
+                    <div class="metric-large purple">20%</div>
+                    <div class="metric-label">faster CPU</div>
+                    <div class="metric-large purple">30%</div>
+                    <div class="metric-label">faster GPU</div>
+                </div>
+
+                <!-- Memory -->
+                <div class="card">
+                    <div class="metric-label">Up to 24GB</div>
+                    <div class="metric-label">unified memory</div>
+                    <div class="metric-label">Up to 50%</div>
+                    <div class="metric-label">more memory</div>
+                    <div class="metric-label">bandwidth</div>
+                </div>
+
+                <!-- Unified Memory -->
+                <div class="card">
+                    <div class="metric-huge purple">96GB</div>
+                    <div class="metric-label">unified memory</div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
+                <!-- Left Column - Transistors -->
+                <div class="card">
+                    <div class="metric-huge purple">67 billion</div>
+                    <div class="metric-large-label">transistors</div>
+                </div>
+
+                <!-- Center Column - M2 Chip -->
+                <div class="chip-card">
+                    <div class="chip-content">
+                        <div class="apple-logo">🍎</div>
+                        <div class="chip-name">M2</div>
+                    </div>
+                </div>
+
+                <!-- Right Column - CPU Cores -->
+                <div class="card">
+                    <div class="cpu-grid">
+                        <div class="cpu-core"></div>
+                        <div class="cpu-core"></div>
+                        <div class="cpu-core"></div>
+                        <div class="cpu-core"></div>
+                        <div class="cpu-core"></div>
+                        <div class="cpu-core"></div>
+                        <div class="cpu-core"></div>
+                        <div class="cpu-core"></div>
+                    </div>
+                    <div class="metric-label">8-core</div>
+                    <div class="metric-label">CPU</div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="footer-grid">
+                <!-- Neural Engine -->
+                <div class="card">
+                    <div class="metric-label">Neural Engine</div>
+                    <div class="metric-large purple">40%</div>
+                    <div class="metric-label">faster</div>
+                </div>
+
+                <!-- Process Technology -->
+                <div class="card">
+                    <div class="metric-label">High-performance</div>
+                    <div class="metric-label">5nm technology</div>
+                    <div class="metric-medium purple">5 nm</div>
+                    <div class="metric-label">technology</div>
+                </div>
+
+                <!-- GPU Visualization -->
+                <div class="card">
+                    <div class="gpu-grid">
+                        <div class="gpu-core"></div>
+                        <div class="gpu-core"></div>
+                        <div class="gpu-core"></div>
+                        <div class="gpu-core"></div>
+                        <div class="gpu-core"></div>
+                        <div class="gpu-core"></div>
+                        <div class="gpu-core"></div>
+                        <div class="gpu-core"></div>
+                        <div class="gpu-core"></div>
+                        <div class="gpu-core"></div>
+                    </div>
+                    <div class="metric-label">10-core</div>
+                    <div class="metric-label">GPU</div>
+                </div>
+
+                <!-- Memory Bandwidth -->
+                <div class="card">
+                    <div class="metric-huge purple">400GB/s</div>
+                    <div class="metric-label">Memory bandwidth</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
