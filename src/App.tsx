@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import AppleM2 from "./pages/AppleM2";
 import SaylaniWelfare from "./pages/SaylaniWelfare";
+import FitTribe from "./pages/FitTribe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,7 +23,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<SaylaniWelfare />} />
+          <Route path="/" element={<FitTribe />} />
+          <Route path="/saylani" element={<SaylaniWelfare />} />
           <Route path="/original" element={<Index />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/portfolio" element={<Portfolio />} />
