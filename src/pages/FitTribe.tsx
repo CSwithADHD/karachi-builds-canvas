@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import PhiveHero from '@/components/home/PhiveHero';
 
 const FitTribe = () => {
   return (
@@ -21,37 +22,7 @@ const FitTribe = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="px-6 py-20 relative">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-              ELEVATE YOUR<br />
-              HEALTH
-            </h1>
-            <div className="flex items-center gap-4 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold">120+</div>
-                <div className="text-gray-400 text-sm">Expert Trainers</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold">240+</div>
-                <div className="text-gray-400 text-sm">Happy Members</div>
-              </div>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="text-4xl lg:text-6xl font-bold mb-4">
-              FITNESS FOR<br />
-              AND VITALITY.
-            </div>
-            <img 
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" 
-              alt="Fitness trainer" 
-              className="rounded-lg w-full h-96 object-cover"
-            />
-          </div>
-        </div>
-      </section>
+      <PhiveHero />
 
       {/* Explore Our Program */}
       <section className="px-6 py-16">

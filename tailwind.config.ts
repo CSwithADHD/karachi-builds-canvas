@@ -32,6 +32,10 @@ export default {
 					gray: '#333333',
 					lightgray: '#f5f5f5',
 				},
+				phive: {
+					yellow: 'hsl(var(--phive-yellow))',
+					black: 'hsl(var(--phive-black))',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
